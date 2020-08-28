@@ -30,12 +30,46 @@ class _WeatherScreenState extends State<WeatherScreen> {
           return Text("${snapshot.error}");
         }
         // By default, show a loading spinner.
-        return CircularProgressIndicator();
+        return Scaffold(
+            backgroundColor: Colors.white,
+            appBar: AppBar(
+              title: Text('Weather App'),
+            ),
+            body: Center(child: CircularProgressIndicator()));
       },
     );
   }
 
   Widget test(WeatherData weatherData) {
+    if (weatherData.humidity == 100)
+      return Scaffold(
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            title: Text('Weather App'),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.only(top: 250.0),
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    'Some Error Occurred, Invalid City Name!',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Icon(
+                    Icons.mood_bad,
+                    color: Colors.blue,
+                    size: 50.0,
+                  ),
+                ],
+              ),
+            ),
+          ));
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -51,7 +85,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 10.0),
                 child: Text(
-                  "Currently in ${input} ",
+                  "${input} ",
                   style: TextStyle(
                     color: Colors.blueGrey,
                     fontSize: 28.0,

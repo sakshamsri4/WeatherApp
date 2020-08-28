@@ -18,9 +18,18 @@ Future<WeatherData> fetchData(String input) async {
     // print(rest);
     return WeatherData.fromJson(myData);
   } else {
+    //return null;
     // If the server did not return a 200 OK response,
     // then throw an exception.
-    throw Exception('Failed to load ');
+    //throw Exception('Failed to load ');
+    return WeatherData(
+        temp: 1000.0,
+        description: 'Invalid City',
+        currently: 'Invalid City',
+        humidity: 100,
+        windSpeed: 200.0,
+        max: 1000.0,
+        min: -1000.0);
   }
 }
 
