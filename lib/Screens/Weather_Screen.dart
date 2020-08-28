@@ -67,17 +67,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   fontWeight: FontWeight.w200,
                 ),
               ),
-              /*Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
-                child: Text(
-                  weatherData.currently,
-                  style: TextStyle(
-                    color: Colors.blueAccent,
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),*/
               Expanded(
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
@@ -223,78 +212,3 @@ class _WeatherScreenState extends State<WeatherScreen> {
     );
   }
 }
-/*
-Column(
-mainAxisSize: MainAxisSize.min,
-children: <Widget>[
-Expanded(
-child: Column(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Column(
-children: <Widget>[
-Padding(
-padding: EdgeInsets.only(bottom: 10.0),
-child: Text(
-"Currently in {input}",
-style: TextStyle(
-color: Colors.white,
-fontSize: 14.0,
-fontWeight: FontWeight.w600,
-),
-),
-),
-Text(
-weatherData.temp.toString(),
-style: TextStyle(
-color: Colors.white,
-fontSize: 14.0,
-fontWeight: FontWeight.w600,
-),
-),
-Padding(
-padding: EdgeInsets.only(bottom: 10.0),
-child: Text(
-//weatherData.currently,
-"abcdefg",
-style: TextStyle(
-color: Colors.white,
-fontSize: 14.0,
-fontWeight: FontWeight.w600,
-),
-),
-),
-Expanded(
-child: Padding(
-padding: EdgeInsets.all(20.0),
-child: ListView(
-children: <Widget>[
-ListTile(
-title: Text('Temperature'),
-trailing: Text(weatherData.description),
-),
-ListTile(
-title: Text('Weather'),
-trailing: Text(weatherData.description),
-),
-ListTile(
-title: Text('Humidity'),
-trailing:
-Text(weatherData.humidity.toString()),
-),
-ListTile(
-title: Text('Wind Speed'),
-trailing:
-Text(weatherData.windSpeed.toString()),
-)
-],
-),
-),
-)
-],
-),
-],
-),
-),
-],
-),*/
