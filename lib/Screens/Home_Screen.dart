@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/Data/city.dart';
 import 'package:weather_app/Screens/Weather_Screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,12 +8,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  void onTextSubmit(String input) {
-    City.getInstance().setIData(input);
-    print(input);
-    WeatherScreen();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +42,13 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 300,
               child: TextField(
                 onSubmitted: (String input) {
-                  onTextSubmit(input);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WeatherScreen(
+                              input: input,
+                            )),
+                  );
                 },
                 style: TextStyle(color: Colors.white, fontSize: 25),
                 decoration: InputDecoration(

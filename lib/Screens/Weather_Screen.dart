@@ -1,16 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app/Data/Services.dart';
-import 'package:weather_app/Data/city.dart';
 
 class WeatherScreen extends StatefulWidget {
+  final String input;
+  WeatherScreen({Key key, @required this.input}) : super(key: key);
   @override
-  _WeatherScreenState createState() => _WeatherScreenState();
+  _WeatherScreenState createState() => _WeatherScreenState(input);
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  String input;
+  _WeatherScreenState(this.input);
   Future<WeatherData> futureAlbum;
-  String input = City.getInstance().getIData();
   @override
   void initState() {
     super.initState();
@@ -96,11 +98,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 ),
                                 ListTile(
                                   title: Text('Humidity'),
-                                  trailing: Text(weatherData.humidity),
+                                  trailing:
+                                      Text(weatherData.humidity.toString()),
                                 ),
                                 ListTile(
                                   title: Text('Wind Speed'),
-                                  trailing: Text(weatherData.windSpeed),
+                                  trailing:
+                                      Text(weatherData.windSpeed.toString()),
                                 )
                               ],
                             ),
