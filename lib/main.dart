@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Screens/Home_Screen.dart';
-import 'package:weather_app/Screens/Weather_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WeatherScreen(),
+      home: HomeScreen(),
     );
   }
 }
