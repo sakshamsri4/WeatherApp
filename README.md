@@ -1,16 +1,29 @@
-# weather_app
+##Simple
 
-A new Flutter application.
+Weather App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+##Ios and Android Flutter Project
 
-A few resources to get you started if this is your first Flutter project:
+The objective of this app is to provide Weather data for the cities.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Some features of this app are:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1.Users can enter the city name from all around the world.
+2.Weather data is displayed-Temperature,Weather,Humidity,
+Wind Speed,Temp_Max,Temp_Min.
+
+Technologies Used:
+1.Dart
+2.Flutter
+3.Git and Github
+4.Rest API
+
+Packages Used:
+1.https://openweathermap.org/current
+
+
+Following Screenshots of the app:
+<img src="./screenshot/s1.jpg" widt="500" height="400">
+<img src="./screenshot/s2.jpg" widt="500" height="400">
+<img src="./screenshot/s3.jpg" widt="500" height="400">
