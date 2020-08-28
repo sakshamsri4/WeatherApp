@@ -24,6 +24,6 @@ Packages Used:
 
 
 Following Screenshots of the app:
-<img src="./screenshot/s1.jpg" widt="500" height="400">
-<img src="./screenshot/s2.jpg" widt="500" height="400">
-<img src="./screenshot/s3.jpg" widt="500" height="400">
+<img src="./Screenshot/s3.jpeg" widt="500" height="400">
+<img src="./Screenshot/s2.jpeg" widt="500" height="400">
+<img src="./Screenshot/s1.jpeg" widt="500" height="400">
