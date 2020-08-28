@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app/Data/Services.dart';
+import 'package:weather_app/Data/city.dart';
 
 class WeatherScreen extends StatefulWidget {
   @override
@@ -8,6 +9,14 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  Future<WeatherData> futureAlbum;
+  String input = City.getInstance().getIData();
+  @override
+  void initState() {
+    super.initState();
+    futureAlbum = fetchData(input);
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<WeatherData>(
