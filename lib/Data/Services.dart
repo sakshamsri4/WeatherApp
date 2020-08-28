@@ -30,21 +30,28 @@ class WeatherData {
   final String currently;
   final int humidity;
   final double windSpeed;
+  final double max;
+  final double min;
 
-  WeatherData(
-      {this.temp,
-      this.description,
-      this.currently,
-      this.humidity,
-      this.windSpeed});
+  WeatherData({
+    this.temp,
+    this.description,
+    this.currently,
+    this.humidity,
+    this.windSpeed,
+    this.max,
+    this.min,
+  });
 
   factory WeatherData.fromJson(Map<String, dynamic> json) {
+    //   print(json['main']['temp']);
     return WeatherData(
-      temp: json['main']['temp'],
-      description: json['weather'][0]['description'],
-      currently: json['weather'][0]['main'],
-      humidity: json['main']['humidity'],
-      windSpeed: json['wind']['speed'],
-    );
+        temp: json['main']['temp'],
+        description: json['weather'][0]['description'],
+        currently: json['weather'][0]['main'],
+        humidity: json['main']['humidity'],
+        windSpeed: json['wind']['speed'],
+        max: json['main']['temp_max'],
+        min: json['main']['temp_min']);
   }
 }

@@ -11,26 +11,30 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Weather App'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            Text(
-              "Search Weather",
-              style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white70),
+            //padding: EdgeInsets.all(10.0),
+            Padding(
+              padding: const EdgeInsets.only(top: 50.0),
+              child: Text(
+                "Search Weather",
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.blueGrey),
+              ),
             ),
             Text(
               "Instanly",
               style: TextStyle(
                   fontSize: 40,
-                  fontWeight: FontWeight.w200,
-                  color: Colors.white70),
+                  fontWeight: FontWeight.w300,
+                  color: Colors.blueGrey),
             ),
             SizedBox(
               height: 24,
@@ -50,11 +54,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             )),
                   );
                 },
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: TextStyle(color: Colors.blueGrey, fontSize: 25),
                 decoration: InputDecoration(
                   hintText: 'Search another location...',
-                  hintStyle: TextStyle(color: Colors.white, fontSize: 18.0),
-                  prefixIcon: Icon(Icons.search, color: Colors.white),
+                  hintStyle: TextStyle(color: Colors.blueGrey, fontSize: 18.0),
+                  prefixIcon: Icon(Icons.search, color: Colors.blueGrey),
                 ),
               ),
             ),
